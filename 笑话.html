@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minssion2</title>
+</head>
+<body>
+    <!--
+    今天气温 35 摄氏度，${targetUser}出门散步。 当走到${place}门前时，突然就￥{action}。人们都惊呆了，${sourceUser}全程目睹但并没有惊慌，因为${targetUser}是一个 140 公斤的大胖子，天气有那么热。
+    -->
+    <p class = "content"></p>
+    <input type="text" ></input>
+    <button type="button" id="button1" class="generate">点击生成笑话</button>
+</body>
+<script>
+    var content = "66666666";
+    var p = document.querySelector(".content");
+    console.log(p);
+    p.innerHTML = content;
+      var joke = generatejoke();
+      p.innerHTML = joke;
+    btn = document.querySelector("#button1");
+    btn.addEventlistener
+    function generatejoke() {
+
+        var targetUser = ['马春雨',  '李善学', '孙悟空', '大傻春', '马冬梅'];
+        var place =['足浴店', 'KTV', '网吧', '台球厅'];
+        var action =['摔了个狗啃泥','调戏了前台','顺人家打火机','哈哈大笑'];
+
+        var targetUser = getElement(targetUser);
+
+        // var targetUser = targetUser[?];
+        var place = getElement(place);
+        var action = getElement(action);
+        var sourceUser = '李善学';
+        var joke = `今天气温 35 摄氏度,${targetUser}出门散步。 当走到${place}门前时，突然就${action}。人们都惊呆了，${sourceUser}全程目睹但并没有惊慌，因为${targetUser}是一个 140 公斤的大胖子，天气有那么热。`
+        console.log(joke);
+        return joke;
+    }
+   
+    
+
+    function getElement(arr){
+
+        var index =  Math.floor(Math.random() * arr.length);
+        return arr[index];
+    }
+</script>
+</html>
